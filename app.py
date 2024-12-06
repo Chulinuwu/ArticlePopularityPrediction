@@ -32,13 +32,13 @@ input_data = pd.DataFrame({
     'Title': [title],
     'PublicationName': [publication_name],
     'AuthorKeywords': [author_keywords],
-    'Asia': [asia],
-    'Oceania': [oceania],
-    'Europe': [europe],
-    'North America': [north_america],
-    'Africa': [africa],
-    'South America': [south_america],
-    'Unknown': [unknown]
+    'Asia': [authors_from_asia],
+    'Oceania': [authors_from_oceania],
+    'Europe': [authors_from_europe],
+    'North America': [authors_from_north_america],
+    'Africa': [authors_from_africa],
+    'South America': [authors_from_south_america],
+    'Unknown': [authors_from_unknown]
 })
 
 # Predict button
