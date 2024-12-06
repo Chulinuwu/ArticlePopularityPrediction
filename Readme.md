@@ -7,3 +7,5 @@ but if you lazy you can just copy model that i push it on repository, 90 percent
 
 ## Try it your self
 
+https://chulinuwu-articlepopularityprediction-app-dev-cpmott.streamlit.app/
+
