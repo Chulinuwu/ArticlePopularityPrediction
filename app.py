@@ -13,18 +13,18 @@ best_model_name = 'XGBoost'
 st.title('CitedByCount Prediction')
 
 # Input form
-st.header('Input Data')
-year = st.number_input('Year', min_value=1900, max_value=2100, step=1)
-title = st.text_input('Title')
-publication_name = st.text_input('Publication Name')
-author_keywords = st.text_input('Author Keywords')
-authors_from_asia = st.number_input('Asia', min_value=0, max_value=10, step=1)
-authors_from_oceania = st.number_input('Oceania', min_value=0, max_value=10, step=1)
-authors_from_europe = st.number_input('Europe', min_value=0, max_value=10, step=1)
-authors_from_north_america = st.number_input('North America', min_value=0, max_value=10, step=1)
-authors_from_africa = st.number_input('Africa', min_value=0, max_value=10, step=1)
-authors_from_south_america = st.number_input('South America', min_value=0, max_value=10, step=1)
-authors_from_unknown = st.number_input('Unknown', min_value=0, max_value=10, step=1)
+st.header('Input Data ( Model : Extreme Gradient Boosting)')
+year = st.number_input('Year (ปีที่ตีพิมพ์)', min_value=1900, max_value=2100, step=1)
+title = st.text_input('Title (หัวข้อบทความ)')
+publication_name = st.text_input('Publication Name (ชื่อวารสาร)')
+author_keywords = st.text_input('Author Keywords (คีย์เวิร์ดของผู้เขียน)')
+authors_from_asia = st.number_input('authors_from_Asia (จำนวนผู้เขียนจากทวีป Asia)', min_value=0, max_value=10, step=1)
+authors_from_oceania = st.number_input('authors_from_Oceania (จำนวนผู้เขียนจากทวีป Oceania)', min_value=0, max_value=10, step=1)
+authors_from_europe = st.number_input('authors_from_Europe (จำนวนผู้เขียนจากทวีป Europe)', min_value=0, max_value=10, step=1)
+authors_from_north_america = st.number_input('authors_from_North America (จำนวนผู้เขียนจากทวีป North America)', min_value=0, max_value=10, step=1)
+authors_from_africa = st.number_input('authors_from_Africa (จำนวนผู้เขียนจากทวีป Africa)', min_value=0, max_value=10, step=1)
+authors_from_south_america = st.number_input('authors_from_South America (จำนวนผู้เขียนจากทวีป America)', min_value=0, max_value=10, step=1)
+authors_from_unknown = st.number_input('authors_from_Unknown (จำนวนผู้เขียนจากทวีปอะไรก็ไม่รู้)', min_value=0, max_value=10, step=1)
 
 # Create a DataFrame from the input
 input_data = pd.DataFrame({
