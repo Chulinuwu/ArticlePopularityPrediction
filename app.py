@@ -6,7 +6,7 @@ import seaborn as sns
 
 # Load the model
 model_path = 'AutogluonModels/ag-20241206_093135'
-predictor = TabularPredictor.load(model_path)
+predictor = TabularPredictor.load(model_path, require_py_version_match=False)
 best_model_name = 'WeightedEnsemble_L2'
 
 # Streamlit app
