@@ -5,3 +5,4 @@ seaborn
 autogluon.tabular
 setuptools
 catboost
+xgboost
