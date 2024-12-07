@@ -13,8 +13,11 @@ from autogluon.tabular import TabularPredictor
 import os
 
 # Load data
-data_path = './data_sample.csv'  # Replace with actual path in deployment
-data = pd.read_csv(data_path)
+data_path = 'data_sample.csv'  # Replace with actual path in deployment
+if os.path.exists(data_path):
+    data = pd.read_csv(data_path)
+else:
+    st.error(f"File not found: {data_path}")
 
 # Sidebar with enhanced design
 st.sidebar.markdown("""
