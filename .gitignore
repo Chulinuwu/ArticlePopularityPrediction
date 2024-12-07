@@ -1,2 +1,20 @@
 Project/*
 *.csv
+
+## 00_Web_Scraping
+# Data from teacher
+/data
+
+# Cache from macos
+*.DS_Store
+*._*.*
+*._*
+
+# Python caches
+*__pycache__
+*.pytest_cache
+
+/scobus_scrape/test.py
+
+# ID, PASS
+*data.py

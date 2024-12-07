@@ -1,0 +1,1662 @@
+[
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85209400001"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85209400001?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85209400001&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85209400001&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85209400001",
+        "dc:identifier": "SCOPUS_ID:85209400001",
+        "eid": "2-s2.0-85209400001",
+        "dc:title": "Minutes",
+        "prism:publicationName": "Comparative Parasitology",
+        "prism:issn": "15252647",
+        "prism:volume": "90",
+        "prism:issueIdentifier": "2",
+        "prism:pageRange": "116",
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.1654/1525-2647-90.2.116",
+        "citedby-count": "0",
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21384",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85208957399"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85208957399?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85208957399&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85208957399&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85208957399",
+        "dc:identifier": "SCOPUS_ID:85208957399",
+        "eid": "2-s2.0-85208957399",
+        "dc:title": "(IM)PIETY: ISLAM, PIOUS SINNING AND REGULATED TRANSGRESSIONS",
+        "dc:creator": "Al-Soukkary W.",
+        "prism:publicationName": "Australian Journal of Islamic Studies",
+        "prism:eIssn": "22074414",
+        "prism:volume": "8",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "55-76",
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.55831/ajis.v8i3.627",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "University of Canterbury",
+                "affiliation-city": "Christchurch",
+                "affiliation-country": "New Zealand"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21101258750",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85208954372"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85208954372?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85208954372&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85208954372&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85208954372",
+        "dc:identifier": "SCOPUS_ID:85208954372",
+        "eid": "2-s2.0-85208954372",
+        "dc:title": "KNOWLEDGE OF THE MILKY WAY IN THE ARABIC CULTURAL REGION BETWEEN THE 8<sup>TH</sup> AND 15<sup>TH</sup> CENTURIES",
+        "dc:creator": "Eckart A.",
+        "prism:publicationName": "Australian Journal of Islamic Studies",
+        "prism:eIssn": "22074414",
+        "prism:volume": "8",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "1-15",
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.55831/ajis.v8i3.637",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Universität zu Köln",
+                "affiliation-city": "Koln",
+                "affiliation-country": "Germany"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21101258750",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85208945959"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85208945959?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85208945959&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85208945959&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85208945959",
+        "dc:identifier": "SCOPUS_ID:85208945959",
+        "eid": "2-s2.0-85208945959",
+        "dc:title": "WEAVING MODERNITY IN SALAFISM: A COMPARATIVE STUDY OF MUHAMMADIYAH AND IZALA MOVEMENTS",
+        "dc:creator": "Nasir M.M.",
+        "prism:publicationName": "Australian Journal of Islamic Studies",
+        "prism:eIssn": "22074414",
+        "prism:volume": "8",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "100-125",
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.55831/ajis.v8i3.619",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Faculty of Islamic Studies",
+                "affiliation-city": "Banda Aceh",
+                "affiliation-country": "Indonesia"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21101258750",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85208940327"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85208940327?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85208940327&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85208940327&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85208940327",
+        "dc:identifier": "SCOPUS_ID:85208940327",
+        "eid": "2-s2.0-85208940327",
+        "dc:title": "PRISON LIFE IN THE EYES OF BEDIÜZZAMAN SAID NURSI AND ALEKSANDER SOLZHENITSYN: A COMPARATIVE STUDY",
+        "dc:creator": "Albayrak I.",
+        "prism:publicationName": "Australian Journal of Islamic Studies",
+        "prism:eIssn": "22074414",
+        "prism:volume": "8",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "16-36",
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.55831/ajis.v8i3.609",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Australian Catholic University",
+                "affiliation-city": "Sydney",
+                "affiliation-country": "Australia"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21101258750",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85208936784"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85208936784?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85208936784&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85208936784&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85208936784",
+        "dc:identifier": "SCOPUS_ID:85208936784",
+        "eid": "2-s2.0-85208936784",
+        "dc:title": "CRITICAL REFLECTIONS ON CURRENT STATUS OF SCHOLARSHIP IN ISLAMIC PSYCHOLOGY – CHALLENGES AND SOLUTIONS",
+        "dc:creator": "Hussein Rassool G.",
+        "prism:publicationName": "Australian Journal of Islamic Studies",
+        "prism:eIssn": "22074414",
+        "prism:volume": "8",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "37-54",
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.55831/ajis.v8i3.641",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Charles Sturt University",
+                "affiliation-city": "Bathurst",
+                "affiliation-country": "Australia"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21101258750",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85207884435"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85207884435?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85207884435&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85207884435&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85207884435",
+        "dc:identifier": "SCOPUS_ID:85207884435",
+        "eid": "2-s2.0-85207884435",
+        "dc:title": "Current materials for 3D-printed flexible medical electrodes",
+        "dc:creator": "Huang Y.",
+        "prism:publicationName": "Materials Science in Additive Manufacturing",
+        "prism:eIssn": "28109635",
+        "prism:volume": "2",
+        "prism:issueIdentifier": "4",
+        "prism:pageRange": null,
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.36922/msam.2084",
+        "citedby-count": "1",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "West China School of Medicine/West China Hospital of Sichuan University",
+                "affiliation-city": "Chengdu",
+                "affiliation-country": "China"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "re",
+        "subtypeDescription": "Review",
+        "article-number": "2084",
+        "source-id": "21101256293",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherhybridgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Hybrid Gold"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85207864030"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85207864030?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85207864030&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85207864030&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85207864030",
+        "dc:identifier": "SCOPUS_ID:85207864030",
+        "eid": "2-s2.0-85207864030",
+        "dc:title": "Metal additive manufacturing of orthopedic bone plates: An overview",
+        "dc:creator": "Xu W.",
+        "prism:publicationName": "Materials Science in Additive Manufacturing",
+        "prism:eIssn": "28109635",
+        "prism:volume": "2",
+        "prism:issueIdentifier": "4",
+        "prism:pageRange": null,
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.36922/msam.2113",
+        "citedby-count": "3",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "University of Bristol",
+                "affiliation-city": "Bristol",
+                "affiliation-country": "United Kingdom"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "re",
+        "subtypeDescription": "Review",
+        "article-number": "2113",
+        "source-id": "21101256293",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherhybridgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Hybrid Gold"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85207317600"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85207317600?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85207317600&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85207317600&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85207317600",
+        "dc:identifier": "SCOPUS_ID:85207317600",
+        "eid": "2-s2.0-85207317600",
+        "dc:title": "The analysis of errors in written word and sentence production The value of a classification for French",
+        "dc:creator": "Soum-Favaro C.",
+        "prism:publicationName": "Written Language and Literacy",
+        "prism:issn": "13876732",
+        "prism:eIssn": "15706001",
+        "prism:volume": "26",
+        "prism:issueIdentifier": "2",
+        "prism:pageRange": "266-291",
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.1075/wll.00080.sou",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "LNPL – E.A.",
+                "affiliation-city": "Toulouse",
+                "affiliation-country": "France"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "5800207693",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85207317417"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85207317417?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85207317417&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85207317417&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85207317417",
+        "dc:identifier": "SCOPUS_ID:85207317417",
+        "eid": "2-s2.0-85207317417",
+        "dc:title": "Editors’ notes",
+        "dc:creator": "Fortis J.M.",
+        "prism:publicationName": "Historiographia Linguistica",
+        "prism:issn": "03025160",
+        "prism:eIssn": "15699781",
+        "prism:volume": "50",
+        "prism:issueIdentifier": "2-3",
+        "prism:pageRange": "145-146",
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.1075/hl.00150.edi",
+        "citedby-count": "0",
+        "prism:aggregationType": "Journal",
+        "subtype": "ed",
+        "subtypeDescription": "Editorial",
+        "source-id": "145485",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85207305208"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85207305208?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85207305208&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85207305208&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85207305208",
+        "dc:identifier": "SCOPUS_ID:85207305208",
+        "eid": "2-s2.0-85207305208",
+        "dc:title": "Handwritten letters and grammatical structures in German A framework",
+        "dc:creator": "Reinken N.",
+        "prism:publicationName": "Written Language and Literacy",
+        "prism:issn": "13876732",
+        "prism:eIssn": "15706001",
+        "prism:volume": "26",
+        "prism:issueIdentifier": "2",
+        "prism:pageRange": "155-187",
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.1075/wll.00077.rei",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Institut für Deutsche Sprache",
+                "affiliation-city": "Mannheim",
+                "affiliation-country": "Germany"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "5800207693",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85207239704"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85207239704?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85207239704&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85207239704&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85207239704",
+        "dc:identifier": "SCOPUS_ID:85207239704",
+        "eid": "2-s2.0-85207239704",
+        "dc:title": "Segments and syllables in Hangeul and Thaana A comparison and optimality theoretic analysis",
+        "dc:creator": "Gnanadesikan A.E.",
+        "prism:publicationName": "Written Language and Literacy",
+        "prism:issn": "13876732",
+        "prism:eIssn": "15706001",
+        "prism:volume": "26",
+        "prism:issueIdentifier": "2",
+        "prism:pageRange": "238-265",
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.1075/wll.00079.gna",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "University of Maryland, College Park",
+                "affiliation-city": "College Park",
+                "affiliation-country": "United States"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "5800207693",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85206894500"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85206894500?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85206894500&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85206894500&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85206894500",
+        "dc:identifier": "SCOPUS_ID:85206894500",
+        "eid": "2-s2.0-85206894500",
+        "dc:title": "Predicting Depression and Anxiety in Vitiligo Patients by Considering Forgiveness, Perfectionism, Anger, and Alexithymia",
+        "dc:creator": "Mousavi S.G.",
+        "prism:publicationName": "Journal of Nursing and Midwifery Sciences",
+        "prism:issn": "23455756",
+        "prism:eIssn": "23455764",
+        "prism:volume": "11",
+        "prism:issueIdentifier": "4",
+        "prism:pageRange": null,
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.5812/jnms-146256",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Mazandaran University of Medical Sciences",
+                "affiliation-city": "Sari",
+                "affiliation-country": "Iran"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "e146256",
+        "source-id": "21101041956",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85206701640"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85206701640?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85206701640&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85206701640&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85206701640",
+        "dc:identifier": "SCOPUS_ID:85206701640",
+        "eid": "2-s2.0-85206701640",
+        "dc:title": "Toxicity Test of Flavonoid Compounds from Ethyl Acetate Extract of Malacca Leaves with Brine Shrimp Lethality Test",
+        "dc:creator": "Zakwan M.",
+        "prism:publicationName": "Jurnal Medik Veteriner",
+        "prism:issn": "26157497",
+        "prism:eIssn": "2581012X",
+        "prism:volume": "6",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "15-19",
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.20473/jmv.vol6.iss3.2023.15-19",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Universitas Syiah Kuala",
+                "affiliation-city": "Banda Aceh",
+                "affiliation-country": "Indonesia"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21101176728",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85205441972"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85205441972?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85205441972&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85205441972&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85205441972",
+        "dc:identifier": "SCOPUS_ID:85205441972",
+        "eid": "2-s2.0-85205441972",
+        "dc:title": "The social message of John Paul II’s encyclicals in the implementation of horizontal principles in EU projects",
+        "dc:creator": "Proniewski M.",
+        "prism:publicationName": "Rocznik Teologii Katolickiej",
+        "prism:issn": "16448855",
+        "prism:volume": "22",
+        "prism:pageRange": "214-228",
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.15290/rtk.2023.22.13",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Uniwersytet w Bialymstoku",
+                "affiliation-city": "Bialystok",
+                "affiliation-country": "Poland"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21101154815",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfree2read"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Bronze"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85205429372"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85205429372?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85205429372&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85205429372&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85205429372",
+        "dc:identifier": "SCOPUS_ID:85205429372",
+        "eid": "2-s2.0-85205429372",
+        "dc:title": "Personalistic dimension of ecclesia-forming catechesis",
+        "dc:creator": "Goliszek P.T.",
+        "prism:publicationName": "Rocznik Teologii Katolickiej",
+        "prism:issn": "16448855",
+        "prism:volume": "22",
+        "prism:pageRange": "7-22",
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.15290/rtk.2023.22.01",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Katolicki Uniwersytet Lubelski Jana Pawła II",
+                "affiliation-city": "Lublin",
+                "affiliation-country": "Poland"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21101154815",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfree2read"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Bronze"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85205293811"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85205293811?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85205293811&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85205293811&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85205293811",
+        "dc:identifier": "SCOPUS_ID:85205293811",
+        "eid": "2-s2.0-85205293811",
+        "dc:title": "Development Pattern of IT-Based Islamic Religious Learning After Covid-19 Pandemic in Coastal Serang Regency",
+        "dc:creator": "Wathoni K.",
+        "prism:publicationName": "Jurnal Pendidikan Agama Islam",
+        "prism:issn": "18295746",
+        "prism:eIssn": "25022075",
+        "prism:volume": "20",
+        "prism:issueIdentifier": "2",
+        "prism:pageRange": "305-316",
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.14421/jpai.v20i2.7808",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Institut Agama Islam Negeri Ponorogo",
+                "affiliation-city": "Ponorogo",
+                "affiliation-country": "Indonesia"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21101214763",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85204677759"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85204677759?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85204677759&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85204677759&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85204677759",
+        "dc:identifier": "SCOPUS_ID:85204677759",
+        "eid": "2-s2.0-85204677759",
+        "dc:title": "Base shape generation and optimization for multi-axis hybrid additive manufacturing",
+        "dc:creator": "Wang Z.",
+        "prism:publicationName": "Materials Science in Additive Manufacturing",
+        "prism:eIssn": "28109635",
+        "prism:volume": "2",
+        "prism:issueIdentifier": "4",
+        "prism:pageRange": null,
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.36922/msam.2103",
+        "citedby-count": "2",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Centrale Nantes",
+                "affiliation-city": "Nantes",
+                "affiliation-country": "France"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "2103",
+        "source-id": "21101256293",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherhybridgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Hybrid Gold"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85204347562"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85204347562?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85204347562&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85204347562&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85204347562",
+        "dc:identifier": "SCOPUS_ID:85204347562",
+        "eid": "2-s2.0-85204347562",
+        "dc:title": "Characteristics of the moose population in central-eastern Poland",
+        "dc:creator": "Dziki-Michalska K.",
+        "prism:publicationName": "Animal Science and Genetics",
+        "prism:eIssn": "27206076",
+        "prism:volume": "19",
+        "prism:issueIdentifier": "4",
+        "prism:pageRange": "69-79",
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.5604/01.3001.0054.3016",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "University of Life Sciences in Lublin",
+                "affiliation-city": "Lublin",
+                "affiliation-country": "Poland"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21101192678",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85204112358"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85204112358?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85204112358&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85204112358&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85204112358",
+        "dc:identifier": "SCOPUS_ID:85204112358",
+        "eid": "2-s2.0-85204112358",
+        "dc:title": "Aux origines du Cercle linguistique de New York",
+        "dc:creator": "Testenoire P.Y.",
+        "prism:publicationName": "Historiographia Linguistica",
+        "prism:issn": "03025160",
+        "prism:eIssn": "15699781",
+        "prism:volume": "50",
+        "prism:issueIdentifier": "2-3",
+        "prism:pageRange": "268-292",
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.1075/hl.00145.tes",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Sorbonne Université",
+                "affiliation-city": "Paris",
+                "affiliation-country": "France"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "145485",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85204021173"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85204021173?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85204021173&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85204021173&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85204021173",
+        "dc:identifier": "SCOPUS_ID:85204021173",
+        "eid": "2-s2.0-85204021173",
+        "dc:title": "Characterization of the peasant economy in two small villages of Cundinamarca (Colombia): Case studies",
+        "dc:creator": "López Melo D.A.",
+        "prism:publicationName": "Agronomia Colombiana",
+        "prism:issn": "01209965",
+        "prism:eIssn": "23573732",
+        "prism:volume": "41",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "1-11",
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.15446/AGRON.COLOMB.V41N3.110435",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Ministerio de Agricultura y Desarrollo Rural",
+                "affiliation-city": "Bogota",
+                "affiliation-country": "Colombia"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21100224444",
+        "openaccess": "1",
+        "openaccessFlag": true
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85203179577"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85203179577?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85203179577&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85203179577&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85203179577",
+        "dc:identifier": "SCOPUS_ID:85203179577",
+        "eid": "2-s2.0-85203179577",
+        "dc:title": "Eri silkworm pupae as fish meal replacement in common carp (Cyprinus carpio L.) feed in indoor aquaria",
+        "dc:creator": "Gokulakrishnaa R.K.",
+        "prism:publicationName": "Entomon",
+        "prism:issn": "03779335",
+        "prism:volume": "48",
+        "prism:issueIdentifier": "4",
+        "prism:pageRange": "583-590",
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.33307/entomon.v48i4.994",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Annamalai University",
+                "affiliation-city": "Chidambaram",
+                "affiliation-country": "India"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21101045749",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherhybridgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Hybrid Gold"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85203138359"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85203138359?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85203138359&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85203138359&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85203138359",
+        "dc:identifier": "SCOPUS_ID:85203138359",
+        "eid": "2-s2.0-85203138359",
+        "dc:title": "Lexical and contextual emotional valence in foreign language vocabulary retention: An experimental study and the Deep Epistemic Emotion Hypothesis",
+        "dc:creator": "Kanazawa Y.",
+        "prism:publicationName": "Mental Lexicon",
+        "prism:issn": "18711340",
+        "prism:eIssn": "18711375",
+        "prism:volume": "18",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "339-365",
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.1075/ml.23001.kan",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Osaka University",
+                "affiliation-city": "Suita",
+                "affiliation-country": "Japan"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "12100155713",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85203078792"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85203078792?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85203078792&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85203078792&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85203078792",
+        "dc:identifier": "SCOPUS_ID:85203078792",
+        "eid": "2-s2.0-85203078792",
+        "dc:title": "Conducting Problem-Based Learning Meta-Analysis: Complexities, Implications, and Best Practices",
+        "dc:creator": "Walker A.",
+        "prism:publicationName": "Interdisciplinary Journal of Problem-based Learning",
+        "prism:eIssn": "15415015",
+        "prism:volume": "17",
+        "prism:issueIdentifier": "2 Special issue",
+        "prism:pageRange": null,
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.14434/ijpbl.v17i2.35844",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Utah State University",
+                "affiliation-city": "Logan",
+                "affiliation-country": "United States"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21100398494",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85203074336"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85203074336?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85203074336&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85203074336&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85203074336",
+        "dc:identifier": "SCOPUS_ID:85203074336",
+        "eid": "2-s2.0-85203074336",
+        "dc:title": "Design-based Research Method in PBL/PjBL: A Case in Nursing Education",
+        "dc:creator": "Tweeten J.",
+        "prism:publicationName": "Interdisciplinary Journal of Problem-based Learning",
+        "prism:eIssn": "15415015",
+        "prism:volume": "17",
+        "prism:issueIdentifier": "2",
+        "prism:pageRange": null,
+        "prism:coverDate": "2023-12-31",
+        "prism:coverDisplayDate": "31 December 2023",
+        "prism:doi": "10.14434/ijpbl.v17i2.37740",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "University of North Dakota",
+                "affiliation-city": "Grand Forks",
+                "affiliation-country": "United States"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21100398494",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                }
+            ]
+        }
+    }
+]
