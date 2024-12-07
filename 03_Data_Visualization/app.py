@@ -13,7 +13,7 @@ from autogluon.tabular import TabularPredictor
 import os
 
 # Load data
-data_path = 'data_sample.csv'  # Replace with actual path in deployment
+data_path = './data_sample.csv'  # Replace with actual path in deployment
 data = pd.read_csv(data_path)
 
 # Sidebar with enhanced design
