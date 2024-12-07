@@ -18,3 +18,8 @@ Project/*
 
 # ID, PASS
 *data.py
+
+AutogluonModels/*
+
+!result/
+!result/*.csv
