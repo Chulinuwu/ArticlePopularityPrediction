@@ -26,7 +26,7 @@ This section involves extracting data provided by the professor and combining it
 
 3. The combined data will be saved as `2_data_combined`.
 
-## 01.5_Data_Storage 💾
+## 02_0_Data_Storage 💾
 This section covers how to store the combined dataset into a Cassandra database and interact with it using CQL (cassandra).
 
 ### Steps:
