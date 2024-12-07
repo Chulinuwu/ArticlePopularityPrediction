@@ -9,6 +9,8 @@ import numpy as np
 from collections import Counter
 import seaborn as sns
 import plotly.express as px
+from autogluon.tabular import TabularPredictor
+import os
 
 # Load data
 data_path = 'data_sample.csv'  # Replace with actual path in deployment
@@ -35,8 +37,8 @@ st.sidebar.markdown("""
 st.sidebar.markdown('<div class="sidebar-title">🔍 Navigation</div>', unsafe_allow_html=True)
 page = st.sidebar.selectbox(
     "Choose a page:",
-    ["Overview", "Relational Graphics", "Spatial Data Visualization"],
-    format_func=lambda x: f"📄 {x}" if x == "Overview" else f"📊 {x}" if x == "Relational Graphics" else f"🌍 {x}"
+    ["Overview", "Relational Graphics", "Spatial Data Visualization", "Model Inference", "Model Comparison"],
+    format_func=lambda x: f"📄 {x}" if x == "Overview" else f"📊 {x}" if x == "Relational Graphics" else f"🌍 {x}" if x == "Spatial Data Visualization" else f"🤖 {x}" if x == "Model Inference" else f"⚖️ {x}"
 )
 
 # Add some additional explanation or information
@@ -266,3 +268,57 @@ elif page == "Spatial Data Visualization":
 
     # แสดงแผนที่ใน Streamlit
     st_folium(m, width=700, height=500)
+    
+elif page == "Model Inference":
+    # Load the model
+    model_path = '../AutogluonModels/ag-20241206_093135'
+    predictor = TabularPredictor.load(model_path, require_py_version_match=False)
+    best_model_name = 'XGBoost'
+
+    # Streamlit app
+    st.title('CitedByCount Prediction')
+
+    # Input form
+    st.header('Input Data ( Model : Extreme Gradient Boosting)')
+    year = st.number_input('Year (ปีที่ตีพิมพ์)', min_value=1900, max_value=2100, step=1)
+    title = st.text_input('Title (หัวข้อบทความ)')
+    publication_name = st.text_input('Publication Name (ชื่อวารสาร)')
+    author_keywords = st.text_input('Author Keywords (คีย์เวิร์ดของผู้เขียน)')
+    authors_from_asia = st.number_input('authors_from_Asia (จำนวนผู้เขียนจากทวีป Asia)', min_value=0, max_value=10, step=1)
+    authors_from_oceania = st.number_input('authors_from_Oceania (จำนวนผู้เขียนจากทวีป Oceania)', min_value=0, max_value=10, step=1)
+    authors_from_europe = st.number_input('authors_from_Europe (จำนวนผู้เขียนจากทวีป Europe)', min_value=0, max_value=10, step=1)
+    authors_from_north_america = st.number_input('authors_from_North America (จำนวนผู้เขียนจากทวีป North America)', min_value=0, max_value=10, step=1)
+    authors_from_africa = st.number_input('authors_from_Africa (จำนวนผู้เขียนจากทวีป Africa)', min_value=0, max_value=10, step=1)
+    authors_from_south_america = st.number_input('authors_from_South America (จำนวนผู้เขียนจากทวีป America)', min_value=0, max_value=10, step=1)
+    authors_from_unknown = st.number_input('authors_from_Unknown (จำนวนผู้เขียนจากทวีปอะไรก็ไม่รู้)', min_value=0, max_value=10, step=1)
+
+    # Create a DataFrame from the input
+    input_data = pd.DataFrame({
+        'Year': [year],
+        'Title': [title],
+        'PublicationName': [publication_name],
+        'AuthorKeywords': [author_keywords],
+        'Asia': [authors_from_asia],
+        'Oceania': [authors_from_oceania],
+        'Europe': [authors_from_europe],
+        'North America': [authors_from_north_america],
+        'Africa': [authors_from_africa],
+        'South America': [authors_from_south_america],
+        'Unknown': [authors_from_unknown]
+    })
+
+    # Predict button
+    if st.button('Predict'):
+        # Predict the CitedByCount
+        prediction = predictor.predict(input_data, model=best_model_name)
+        st.write(f'Predicted CitedByCount: {prediction[0]}')
+
+        # Display the input data and prediction
+        st.subheader('Input Data')
+        st.write(input_data)
+
+        st.subheader('Prediction')
+        st.write(prediction)
+        
+elif page == "Model Comparison":
+    st.write("Model Comparison Page")
