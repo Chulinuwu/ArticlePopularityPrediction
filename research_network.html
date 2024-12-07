@@ -1,0 +1,250 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+             #loadingBar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width: 100%;
+                 height: 750px;
+                 background-color:rgba(200,200,200,0.8);
+                 -webkit-transition: all 0.5s ease;
+                 -moz-transition: all 0.5s ease;
+                 -ms-transition: all 0.5s ease;
+                 -o-transition: all 0.5s ease;
+                 transition: all 0.5s ease;
+                 opacity:1;
+             }
+
+             #bar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width:20px;
+                 height:20px;
+                 margin:auto auto auto auto;
+                 border-radius:11px;
+                 border:2px solid rgba(30,30,30,0.05);
+                 background: rgb(0, 173, 246); /* Old browsers */
+                 box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+             }
+
+             #border {
+                 position:absolute;
+                 top:10px;
+                 left:10px;
+                 width:500px;
+                 height:23px;
+                 margin:auto auto auto auto;
+                 box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+                 border-radius:10px;
+             }
+
+             #text {
+                 position:absolute;
+                 top:8px;
+                 left:530px;
+                 width:30px;
+                 height:50px;
+                 margin:auto auto auto auto;
+                 font-size:22px;
+                 color: #000000;
+             }
+
+             div.outerBorder {
+                 position:relative;
+                 top:400px;
+                 width:600px;
+                 height:44px;
+                 margin:auto auto auto auto;
+                 border:8px solid rgba(0,0,0,0.1);
+                 background: rgb(252,252,252); /* Old browsers */
+                 background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+                 background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+                 background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+                 border-radius:72px;
+                 box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+             }
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+            <div id="loadingBar">
+              <div class="outerBorder">
+                <div id="text">0%</div>
+                <div id="border">
+                  <div id="bar"></div>
+                </div>
+              </div>
+            </div>
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"group": 1, "id": "The Effect of a Dual Cure Activator Composed of Aromatic Sulfinate Amide Derivatives on the Microhardness of Self-adhesive Resin Cements without Light Activation", "label": "The Effect of a Dual Cure Activator Composed of Aromatic Sulfinate Amide Derivatives on the Microhardness of Self-adhesive Resin Cements without Light Activation", "shape": "dot", "size": 1}, {"group": "keyword", "id": "Dual cure activator", "label": "Dual cure activator", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Microhardness", "label": "Microhardness", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Self-adhesive resin cement", "label": "Self-adhesive resin cement", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Self-curing", "label": "Self-curing", "shape": "dot", "size": 10}, {"group": "keyword", "id": "sodium sulfinate salt", "label": "sodium sulfinate salt", "shape": "dot", "size": 10}, {"group": 1, "id": "Whole-Exome Sequencing Solved over 2-Decade Kidney Disease Enigma", "label": "Whole-Exome Sequencing Solved over 2-Decade Kidney Disease Enigma", "shape": "dot", "size": 1}, {"group": "keyword", "id": "Genetic focal segmental glomerulosclerosis", "label": "Genetic focal segmental glomerulosclerosis", "shape": "dot", "size": 10}, {"group": "keyword", "id": "LMX1B-associated nephropathy", "label": "LMX1B-associated nephropathy", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Whole-exome sequencing", "label": "Whole-exome sequencing", "shape": "dot", "size": 10}, {"group": 0, "id": "Cage egg producers\u0027 perspectives on the adoption of cage-free systems in China, Japan, Indonesia, Malaysia, Philippines, and Thailand", "label": "Cage egg producers\u0027 perspectives on the adoption of cage-free systems in China, Japan, Indonesia, Malaysia, Philippines, and Thailand", "shape": "dot", "size": 0}, {"group": "keyword", "id": "animal welfare", "label": "animal welfare", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Asia", "label": "Asia", "shape": "dot", "size": 10}, {"group": "keyword", "id": "chickens", "label": "chickens", "shape": "dot", "size": 10}, {"group": "keyword", "id": "egg", "label": "egg", "shape": "dot", "size": 10}, {"group": "keyword", "id": "hens", "label": "hens", "shape": "dot", "size": 10}, {"group": "keyword", "id": "production", "label": "production", "shape": "dot", "size": 10}, {"group": 1, "id": "New trend of applied plasma science in ISAPS \u201922", "label": "New trend of applied plasma science in ISAPS \u201922", "shape": "dot", "size": 0}, {"group": "keyword", "id": "Applied plasma science", "label": "Applied plasma science", "shape": "dot", "size": 10}, {"group": "keyword", "id": "IAPS", "label": "IAPS", "shape": "dot", "size": 10}, {"group": "keyword", "id": "ISAPS 2022", "label": "ISAPS 2022", "shape": "dot", "size": 10}, {"group": "keyword", "id": "New trend", "label": "New trend", "shape": "dot", "size": 10}, {"group": 1, "id": "Full Endoscopic Drainage of Cervical Epidural Abscess", "label": "Full Endoscopic Drainage of Cervical Epidural Abscess", "shape": "dot", "size": 0}, {"group": "keyword", "id": "Cervical epidural abscess", "label": "Cervical epidural abscess", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Epidural abscess", "label": "Epidural abscess", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Full endoscopic approach", "label": "Full endoscopic approach", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Posterior cervical drainage", "label": "Posterior cervical drainage", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Transcorporeal approach", "label": "Transcorporeal approach", "shape": "dot", "size": 10}, {"group": 1, "id": "Safinamide as an Adjunct to Levodopa in Asian and Caucasian Patients With Parkinson\u2019s Disease and Motor Fluctuations: A Post Hoc Analysis of the SETTLE Study", "label": "Safinamide as an Adjunct to Levodopa in Asian and Caucasian Patients With Parkinson\u2019s Disease and Motor Fluctuations: A Post Hoc Analysis of the SETTLE Study", "shape": "dot", "size": 0}, {"group": "keyword", "id": "aaAsian", "label": "aaAsian", "shape": "dot", "size": 10}, {"group": "keyword", "id": "MAO-B inhibitor", "label": "MAO-B inhibitor", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Motor fluctuation", "label": "Motor fluctuation", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Parkinson\u2019s disease", "label": "Parkinson\u2019s disease", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Randomized clinical trial", "label": "Randomized clinical trial", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Safinamide", "label": "Safinamide", "shape": "dot", "size": 10}, {"group": 1, "id": "Budd-Chiari syndrome: consensus guidance of the Asian Pacific Association for the study of the liver (APASL)", "label": "Budd-Chiari syndrome: consensus guidance of the Asian Pacific Association for the study of the liver (APASL)", "shape": "dot", "size": 26}, {"group": "keyword", "id": "Ascites", "label": "Ascites", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Budd Chiari syndrome", "label": "Budd Chiari syndrome", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Hepatic vein stenting", "label": "Hepatic vein stenting", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Hepatocellular carcinoma", "label": "Hepatocellular carcinoma", "shape": "dot", "size": 10}, {"group": "keyword", "id": "HVOTO", "label": "HVOTO", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Liver biopsy", "label": "Liver biopsy", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Liver transplant", "label": "Liver transplant", "shape": "dot", "size": 10}, {"group": "keyword", "id": "MOVC", "label": "MOVC", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Portal hypertension", "label": "Portal hypertension", "shape": "dot", "size": 10}, {"group": "keyword", "id": "TIPS", "label": "TIPS", "shape": "dot", "size": 10}, {"group": 1, "id": "Trace element geochemistry and U-Pb dating of zircon inclusions in sapphire from Southern Vietnam: Indicator of basalt-related sapphire formation", "label": "Trace element geochemistry and U-Pb dating of zircon inclusions in sapphire from Southern Vietnam: Indicator of basalt-related sapphire formation", "shape": "dot", "size": 0}, {"group": "keyword", "id": "Cenozoic basalt", "label": "Cenozoic basalt", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Sapphire", "label": "Sapphire", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Southern Vietnam", "label": "Southern Vietnam", "shape": "dot", "size": 10}, {"group": "keyword", "id": "U-Pb", "label": "U-Pb", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Zircon", "label": "Zircon", "shape": "dot", "size": 10}, {"group": 2, "id": "Premature Senescence and Telomere Shortening Induced by Oxidative Stress From Oxalate, Calcium Oxalate Monohydrate, and Urine From Patients With Calcium Oxalate Nephrolithiasis", "label": "Premature Senescence and Telomere Shortening Induced by Oxidative Stress From Oxalate, Calcium Oxalate Monohydrate, and Urine From Patients With Calcium Oxalate Nephrolithiasis", "shape": "dot", "size": 5}, {"group": "keyword", "id": "calcium oxalate", "label": "calcium oxalate", "shape": "dot", "size": 10}, {"group": "keyword", "id": "cellular senescence", "label": "cellular senescence", "shape": "dot", "size": 10}, {"group": "keyword", "id": "kidney calculi", "label": "kidney calculi", "shape": "dot", "size": 10}, {"group": "keyword", "id": "nephrolithiasis", "label": "nephrolithiasis", "shape": "dot", "size": 10}, {"group": "keyword", "id": "oxalates", "label": "oxalates", "shape": "dot", "size": 10}, {"group": "keyword", "id": "oxidative stress", "label": "oxidative stress", "shape": "dot", "size": 10}, {"group": "keyword", "id": "urine", "label": "urine", "shape": "dot", "size": 10}, {"group": 1, "id": "Fabrication of bismuth ferrite/graphitic carbon nitride/N-doped graphene quantum dots composite for high performance supercapacitors", "label": "Fabrication of bismuth ferrite/graphitic carbon nitride/N-doped graphene quantum dots composite for high performance supercapacitors", "shape": "dot", "size": 14}, {"group": "keyword", "id": "Asymmetric supercapacitor", "label": "Asymmetric supercapacitor", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Bismuth ferrite", "label": "Bismuth ferrite", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Graphene quantum dots", "label": "Graphene quantum dots", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Graphitic carbon nitride", "label": "Graphitic carbon nitride", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Nanocomposite", "label": "Nanocomposite", "shape": "dot", "size": 10}, {"group": 1, "id": "Endoscopic Discectomy-Assisted Oblique Lumbar Interbody Fusion", "label": "Endoscopic Discectomy-Assisted Oblique Lumbar Interbody Fusion", "shape": "dot", "size": 0}, {"group": "keyword", "id": "Direct decompression", "label": "Direct decompression", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Endoscopic assisted", "label": "Endoscopic assisted", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Full-endoscopic discectomy", "label": "Full-endoscopic discectomy", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Oblique lumbar interbody fusion (OLIF)", "label": "Oblique lumbar interbody fusion (OLIF)", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Prepsoas", "label": "Prepsoas", "shape": "dot", "size": 10}, {"group": 2, "id": "Variable Damping Actuator Using an Electromagnetic Brake for Impedance Modulation in Physical Human\u2013Robot Interaction", "label": "Variable Damping Actuator Using an Electromagnetic Brake for Impedance Modulation in Physical Human\u2013Robot Interaction", "shape": "dot", "size": 1}, {"group": "keyword", "id": "actuators", "label": "actuators", "shape": "dot", "size": 10}, {"group": "keyword", "id": "electromagnetic brake", "label": "electromagnetic brake", "shape": "dot", "size": 10}, {"group": "keyword", "id": "friction mechanism", "label": "friction mechanism", "shape": "dot", "size": 10}, {"group": "keyword", "id": "variable physical damping", "label": "variable physical damping", "shape": "dot", "size": 10}, {"group": 1, "id": "Primordial gravitational waves from excited states", "label": "Primordial gravitational waves from excited states", "shape": "dot", "size": 9}, {"group": "keyword", "id": "Cosmology of Theories BSM", "label": "Cosmology of Theories BSM", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Early Universe Particle Physics", "label": "Early Universe Particle Physics", "shape": "dot", "size": 10}, {"group": 4, "id": "Effect of pyrethroid insecticides exposure in relation to pyrethroid metabolite and GABA concentration of young children, Bangkok Thailand", "label": "Effect of pyrethroid insecticides exposure in relation to pyrethroid metabolite and GABA concentration of young children, Bangkok Thailand", "shape": "dot", "size": 3}, {"group": "keyword", "id": "children", "label": "children", "shape": "dot", "size": 10}, {"group": "keyword", "id": "GABA", "label": "GABA", "shape": "dot", "size": 10}, {"group": "keyword", "id": "households", "label": "households", "shape": "dot", "size": 10}, {"group": "keyword", "id": "pyrethroids metabolite", "label": "pyrethroids metabolite", "shape": "dot", "size": 10}, {"group": 1, "id": "Financing Strategies to Facilitate Access to High-Cost Anticancer Drugs: A Systematic Review of the Literature", "label": "Financing Strategies to Facilitate Access to High-Cost Anticancer Drugs: A Systematic Review of the Literature", "shape": "dot", "size": 0}, {"group": "keyword", "id": "Antineoplastic Drug", "label": "Antineoplastic Drug", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Expensive", "label": "Expensive", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Reimbursement", "label": "Reimbursement", "shape": "dot", "size": 10}, {"group": 1, "id": "Enhancing the Hydrodeoxygenation and Isomerization using Re Nanoparticles Decorated on Ni/SAPO-11 Catalysts for Direct Production of Low-Cold Flow Diesel from Triglycerides", "label": "Enhancing the Hydrodeoxygenation and Isomerization using Re Nanoparticles Decorated on Ni/SAPO-11 Catalysts for Direct Production of Low-Cold Flow Diesel from Triglycerides", "shape": "dot", "size": 0}, {"group": "keyword", "id": "Hydrodeoxygenation", "label": "Hydrodeoxygenation", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Isomerization", "label": "Isomerization", "shape": "dot", "size": 10}, {"group": "keyword", "id": "NiRe catalyst", "label": "NiRe catalyst", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Palm oil", "label": "Palm oil", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Synthetic diesel", "label": "Synthetic diesel", "shape": "dot", "size": 10}, {"group": 1, "id": "Effect of nonmetals (B, O, P, and S) doped with porous g-C3N4 for improved electron transfer towards photocatalytic CO2 reduction with water into CH4", "label": "Effect of nonmetals (B, O, P, and S) doped with porous g-C3N4 for improved electron transfer towards photocatalytic CO2 reduction with water into CH4", "shape": "dot", "size": 55}, {"group": "keyword", "id": "Carbon dioxide", "label": "Carbon dioxide", "shape": "dot", "size": 10}, {"group": "keyword", "id": "CO2 photoreduction", "label": "CO2 photoreduction", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Methane production", "label": "Methane production", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Nonmetals doped", "label": "Nonmetals doped", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Porous g-C3N4", "label": "Porous g-C3N4", "shape": "dot", "size": 10}, {"group": 0, "id": "Incidence and Clearance of Anal Human Papillomavirus Infection in 16 164 Individuals, According to Human Immunodeficiency Virus Status, Sex, and Male Sexuality: An International Pooled Analysis of 34 Longitudinal Studies", "label": "Incidence and Clearance of Anal Human Papillomavirus Infection in 16 164 Individuals, According to Human Immunodeficiency Virus Status, Sex, and Male Sexuality: An International Pooled Analysis of 34 Longitudinal Studies", "shape": "dot", "size": 6}, {"group": "keyword", "id": "anus", "label": "anus", "shape": "dot", "size": 10}, {"group": "keyword", "id": "clearance", "label": "clearance", "shape": "dot", "size": 10}, {"group": "keyword", "id": "HIV", "label": "HIV", "shape": "dot", "size": 10}, {"group": "keyword", "id": "HPV", "label": "HPV", "shape": "dot", "size": 10}, {"group": "keyword", "id": "incidence", "label": "incidence", "shape": "dot", "size": 10}, {"group": 1, "id": "Extending Theory of Planned Behavior to Understand Service-Oriented Organizational Citizen Behavior", "label": "Extending Theory of Planned Behavior to Understand Service-Oriented Organizational Citizen Behavior", "shape": "dot", "size": 3}, {"group": "keyword", "id": "job attitude", "label": "job attitude", "shape": "dot", "size": 10}, {"group": "keyword", "id": "organizational justice", "label": "organizational justice", "shape": "dot", "size": 10}, {"group": "keyword", "id": "service-oriented organizational citizenship behavior", "label": "service-oriented organizational citizenship behavior", "shape": "dot", "size": 10}, {"group": "keyword", "id": "structural equation modeling", "label": "structural equation modeling", "shape": "dot", "size": 10}, {"group": "keyword", "id": "theory of planned behavior", "label": "theory of planned behavior", "shape": "dot", "size": 10}, {"group": 1, "id": "Capability of single and double elements doped perovskite oxide catalysts in 5-hydroxymethyl furfural oxidation", "label": "Capability of single and double elements doped perovskite oxide catalysts in 5-hydroxymethyl furfural oxidation", "shape": "dot", "size": 0}, {"group": "keyword", "id": "5-Hydroxymethylfurfural", "label": "5-Hydroxymethylfurfural", "shape": "dot", "size": 10}, {"group": "keyword", "id": "LaMnxNi1-xO3-\u03b4", "label": "LaMnxNi1-xO3-\u03b4", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Oxidation", "label": "Oxidation", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Selectivity", "label": "Selectivity", "shape": "dot", "size": 10}, {"group": "keyword", "id": "Surface oxygen", "label": "Surface oxygen", "shape": "dot", "size": 10}]);
+                  edges = new vis.DataSet([{"from": "The Effect of a Dual Cure Activator Composed of Aromatic Sulfinate Amide Derivatives on the Microhardness of Self-adhesive Resin Cements without Light Activation", "to": "Dual cure activator", "width": 1}, {"from": "The Effect of a Dual Cure Activator Composed of Aromatic Sulfinate Amide Derivatives on the Microhardness of Self-adhesive Resin Cements without Light Activation", "to": "Microhardness", "width": 1}, {"from": "The Effect of a Dual Cure Activator Composed of Aromatic Sulfinate Amide Derivatives on the Microhardness of Self-adhesive Resin Cements without Light Activation", "to": "Self-adhesive resin cement", "width": 1}, {"from": "The Effect of a Dual Cure Activator Composed of Aromatic Sulfinate Amide Derivatives on the Microhardness of Self-adhesive Resin Cements without Light Activation", "to": "Self-curing", "width": 1}, {"from": "The Effect of a Dual Cure Activator Composed of Aromatic Sulfinate Amide Derivatives on the Microhardness of Self-adhesive Resin Cements without Light Activation", "to": "sodium sulfinate salt", "width": 1}, {"from": "Whole-Exome Sequencing Solved over 2-Decade Kidney Disease Enigma", "to": "Genetic focal segmental glomerulosclerosis", "width": 1}, {"from": "Whole-Exome Sequencing Solved over 2-Decade Kidney Disease Enigma", "to": "LMX1B-associated nephropathy", "width": 1}, {"from": "Whole-Exome Sequencing Solved over 2-Decade Kidney Disease Enigma", "to": "Whole-exome sequencing", "width": 1}, {"from": "Cage egg producers\u0027 perspectives on the adoption of cage-free systems in China, Japan, Indonesia, Malaysia, Philippines, and Thailand", "to": "animal welfare", "width": 1}, {"from": "Cage egg producers\u0027 perspectives on the adoption of cage-free systems in China, Japan, Indonesia, Malaysia, Philippines, and Thailand", "to": "Asia", "width": 1}, {"from": "Cage egg producers\u0027 perspectives on the adoption of cage-free systems in China, Japan, Indonesia, Malaysia, Philippines, and Thailand", "to": "chickens", "width": 1}, {"from": "Cage egg producers\u0027 perspectives on the adoption of cage-free systems in China, Japan, Indonesia, Malaysia, Philippines, and Thailand", "to": "egg", "width": 1}, {"from": "Cage egg producers\u0027 perspectives on the adoption of cage-free systems in China, Japan, Indonesia, Malaysia, Philippines, and Thailand", "to": "hens", "width": 1}, {"from": "Cage egg producers\u0027 perspectives on the adoption of cage-free systems in China, Japan, Indonesia, Malaysia, Philippines, and Thailand", "to": "production", "width": 1}, {"from": "New trend of applied plasma science in ISAPS \u201922", "to": "Applied plasma science", "width": 1}, {"from": "New trend of applied plasma science in ISAPS \u201922", "to": "IAPS", "width": 1}, {"from": "New trend of applied plasma science in ISAPS \u201922", "to": "ISAPS 2022", "width": 1}, {"from": "New trend of applied plasma science in ISAPS \u201922", "to": "New trend", "width": 1}, {"from": "Full Endoscopic Drainage of Cervical Epidural Abscess", "to": "Cervical epidural abscess", "width": 1}, {"from": "Full Endoscopic Drainage of Cervical Epidural Abscess", "to": "Epidural abscess", "width": 1}, {"from": "Full Endoscopic Drainage of Cervical Epidural Abscess", "to": "Full endoscopic approach", "width": 1}, {"from": "Full Endoscopic Drainage of Cervical Epidural Abscess", "to": "Posterior cervical drainage", "width": 1}, {"from": "Full Endoscopic Drainage of Cervical Epidural Abscess", "to": "Transcorporeal approach", "width": 1}, {"from": "Safinamide as an Adjunct to Levodopa in Asian and Caucasian Patients With Parkinson\u2019s Disease and Motor Fluctuations: A Post Hoc Analysis of the SETTLE Study", "to": "aaAsian", "width": 1}, {"from": "Safinamide as an Adjunct to Levodopa in Asian and Caucasian Patients With Parkinson\u2019s Disease and Motor Fluctuations: A Post Hoc Analysis of the SETTLE Study", "to": "MAO-B inhibitor", "width": 1}, {"from": "Safinamide as an Adjunct to Levodopa in Asian and Caucasian Patients With Parkinson\u2019s Disease and Motor Fluctuations: A Post Hoc Analysis of the SETTLE Study", "to": "Motor fluctuation", "width": 1}, {"from": "Safinamide as an Adjunct to Levodopa in Asian and Caucasian Patients With Parkinson\u2019s Disease and Motor Fluctuations: A Post Hoc Analysis of the SETTLE Study", "to": "Parkinson\u2019s disease", "width": 1}, {"from": "Safinamide as an Adjunct to Levodopa in Asian and Caucasian Patients With Parkinson\u2019s Disease and Motor Fluctuations: A Post Hoc Analysis of the SETTLE Study", "to": "Randomized clinical trial", "width": 1}, {"from": "Safinamide as an Adjunct to Levodopa in Asian and Caucasian Patients With Parkinson\u2019s Disease and Motor Fluctuations: A Post Hoc Analysis of the SETTLE Study", "to": "Safinamide", "width": 1}, {"from": "Budd-Chiari syndrome: consensus guidance of the Asian Pacific Association for the study of the liver (APASL)", "to": "Ascites", "width": 1}, {"from": "Budd-Chiari syndrome: consensus guidance of the Asian Pacific Association for the study of the liver (APASL)", "to": "Budd Chiari syndrome", "width": 1}, {"from": "Budd-Chiari syndrome: consensus guidance of the Asian Pacific Association for the study of the liver (APASL)", "to": "Hepatic vein stenting", "width": 1}, {"from": "Budd-Chiari syndrome: consensus guidance of the Asian Pacific Association for the study of the liver (APASL)", "to": "Hepatocellular carcinoma", "width": 1}, {"from": "Budd-Chiari syndrome: consensus guidance of the Asian Pacific Association for the study of the liver (APASL)", "to": "HVOTO", "width": 1}, {"from": "Budd-Chiari syndrome: consensus guidance of the Asian Pacific Association for the study of the liver (APASL)", "to": "Liver biopsy", "width": 1}, {"from": "Budd-Chiari syndrome: consensus guidance of the Asian Pacific Association for the study of the liver (APASL)", "to": "Liver transplant", "width": 1}, {"from": "Budd-Chiari syndrome: consensus guidance of the Asian Pacific Association for the study of the liver (APASL)", "to": "MOVC", "width": 1}, {"from": "Budd-Chiari syndrome: consensus guidance of the Asian Pacific Association for the study of the liver (APASL)", "to": "Portal hypertension", "width": 1}, {"from": "Budd-Chiari syndrome: consensus guidance of the Asian Pacific Association for the study of the liver (APASL)", "to": "TIPS", "width": 1}, {"from": "Trace element geochemistry and U-Pb dating of zircon inclusions in sapphire from Southern Vietnam: Indicator of basalt-related sapphire formation", "to": "Cenozoic basalt", "width": 1}, {"from": "Trace element geochemistry and U-Pb dating of zircon inclusions in sapphire from Southern Vietnam: Indicator of basalt-related sapphire formation", "to": "Sapphire", "width": 1}, {"from": "Trace element geochemistry and U-Pb dating of zircon inclusions in sapphire from Southern Vietnam: Indicator of basalt-related sapphire formation", "to": "Southern Vietnam", "width": 1}, {"from": "Trace element geochemistry and U-Pb dating of zircon inclusions in sapphire from Southern Vietnam: Indicator of basalt-related sapphire formation", "to": "U-Pb", "width": 1}, {"from": "Trace element geochemistry and U-Pb dating of zircon inclusions in sapphire from Southern Vietnam: Indicator of basalt-related sapphire formation", "to": "Zircon", "width": 1}, {"from": "Premature Senescence and Telomere Shortening Induced by Oxidative Stress From Oxalate, Calcium Oxalate Monohydrate, and Urine From Patients With Calcium Oxalate Nephrolithiasis", "to": "calcium oxalate", "width": 1}, {"from": "Premature Senescence and Telomere Shortening Induced by Oxidative Stress From Oxalate, Calcium Oxalate Monohydrate, and Urine From Patients With Calcium Oxalate Nephrolithiasis", "to": "cellular senescence", "width": 1}, {"from": "Premature Senescence and Telomere Shortening Induced by Oxidative Stress From Oxalate, Calcium Oxalate Monohydrate, and Urine From Patients With Calcium Oxalate Nephrolithiasis", "to": "kidney calculi", "width": 1}, {"from": "Premature Senescence and Telomere Shortening Induced by Oxidative Stress From Oxalate, Calcium Oxalate Monohydrate, and Urine From Patients With Calcium Oxalate Nephrolithiasis", "to": "nephrolithiasis", "width": 1}, {"from": "Premature Senescence and Telomere Shortening Induced by Oxidative Stress From Oxalate, Calcium Oxalate Monohydrate, and Urine From Patients With Calcium Oxalate Nephrolithiasis", "to": "oxalates", "width": 1}, {"from": "Premature Senescence and Telomere Shortening Induced by Oxidative Stress From Oxalate, Calcium Oxalate Monohydrate, and Urine From Patients With Calcium Oxalate Nephrolithiasis", "to": "oxidative stress", "width": 1}, {"from": "Premature Senescence and Telomere Shortening Induced by Oxidative Stress From Oxalate, Calcium Oxalate Monohydrate, and Urine From Patients With Calcium Oxalate Nephrolithiasis", "to": "urine", "width": 1}, {"from": "Fabrication of bismuth ferrite/graphitic carbon nitride/N-doped graphene quantum dots composite for high performance supercapacitors", "to": "Asymmetric supercapacitor", "width": 1}, {"from": "Fabrication of bismuth ferrite/graphitic carbon nitride/N-doped graphene quantum dots composite for high performance supercapacitors", "to": "Bismuth ferrite", "width": 1}, {"from": "Fabrication of bismuth ferrite/graphitic carbon nitride/N-doped graphene quantum dots composite for high performance supercapacitors", "to": "Graphene quantum dots", "width": 1}, {"from": "Fabrication of bismuth ferrite/graphitic carbon nitride/N-doped graphene quantum dots composite for high performance supercapacitors", "to": "Graphitic carbon nitride", "width": 1}, {"from": "Fabrication of bismuth ferrite/graphitic carbon nitride/N-doped graphene quantum dots composite for high performance supercapacitors", "to": "Nanocomposite", "width": 1}, {"from": "Endoscopic Discectomy-Assisted Oblique Lumbar Interbody Fusion", "to": "Direct decompression", "width": 1}, {"from": "Endoscopic Discectomy-Assisted Oblique Lumbar Interbody Fusion", "to": "Endoscopic assisted", "width": 1}, {"from": "Endoscopic Discectomy-Assisted Oblique Lumbar Interbody Fusion", "to": "Full-endoscopic discectomy", "width": 1}, {"from": "Endoscopic Discectomy-Assisted Oblique Lumbar Interbody Fusion", "to": "Oblique lumbar interbody fusion (OLIF)", "width": 1}, {"from": "Endoscopic Discectomy-Assisted Oblique Lumbar Interbody Fusion", "to": "Prepsoas", "width": 1}, {"from": "Variable Damping Actuator Using an Electromagnetic Brake for Impedance Modulation in Physical Human\u2013Robot Interaction", "to": "actuators", "width": 1}, {"from": "Variable Damping Actuator Using an Electromagnetic Brake for Impedance Modulation in Physical Human\u2013Robot Interaction", "to": "electromagnetic brake", "width": 1}, {"from": "Variable Damping Actuator Using an Electromagnetic Brake for Impedance Modulation in Physical Human\u2013Robot Interaction", "to": "friction mechanism", "width": 1}, {"from": "Variable Damping Actuator Using an Electromagnetic Brake for Impedance Modulation in Physical Human\u2013Robot Interaction", "to": "variable physical damping", "width": 1}, {"from": "Primordial gravitational waves from excited states", "to": "Cosmology of Theories BSM", "width": 1}, {"from": "Primordial gravitational waves from excited states", "to": "Early Universe Particle Physics", "width": 1}, {"from": "Effect of pyrethroid insecticides exposure in relation to pyrethroid metabolite and GABA concentration of young children, Bangkok Thailand", "to": "children", "width": 1}, {"from": "Effect of pyrethroid insecticides exposure in relation to pyrethroid metabolite and GABA concentration of young children, Bangkok Thailand", "to": "GABA", "width": 1}, {"from": "Effect of pyrethroid insecticides exposure in relation to pyrethroid metabolite and GABA concentration of young children, Bangkok Thailand", "to": "households", "width": 1}, {"from": "Effect of pyrethroid insecticides exposure in relation to pyrethroid metabolite and GABA concentration of young children, Bangkok Thailand", "to": "pyrethroids metabolite", "width": 1}, {"from": "Financing Strategies to Facilitate Access to High-Cost Anticancer Drugs: A Systematic Review of the Literature", "to": "Antineoplastic Drug", "width": 1}, {"from": "Financing Strategies to Facilitate Access to High-Cost Anticancer Drugs: A Systematic Review of the Literature", "to": "Expensive", "width": 1}, {"from": "Financing Strategies to Facilitate Access to High-Cost Anticancer Drugs: A Systematic Review of the Literature", "to": "Reimbursement", "width": 1}, {"from": "Enhancing the Hydrodeoxygenation and Isomerization using Re Nanoparticles Decorated on Ni/SAPO-11 Catalysts for Direct Production of Low-Cold Flow Diesel from Triglycerides", "to": "Hydrodeoxygenation", "width": 1}, {"from": "Enhancing the Hydrodeoxygenation and Isomerization using Re Nanoparticles Decorated on Ni/SAPO-11 Catalysts for Direct Production of Low-Cold Flow Diesel from Triglycerides", "to": "Isomerization", "width": 1}, {"from": "Enhancing the Hydrodeoxygenation and Isomerization using Re Nanoparticles Decorated on Ni/SAPO-11 Catalysts for Direct Production of Low-Cold Flow Diesel from Triglycerides", "to": "NiRe catalyst", "width": 1}, {"from": "Enhancing the Hydrodeoxygenation and Isomerization using Re Nanoparticles Decorated on Ni/SAPO-11 Catalysts for Direct Production of Low-Cold Flow Diesel from Triglycerides", "to": "Palm oil", "width": 1}, {"from": "Enhancing the Hydrodeoxygenation and Isomerization using Re Nanoparticles Decorated on Ni/SAPO-11 Catalysts for Direct Production of Low-Cold Flow Diesel from Triglycerides", "to": "Synthetic diesel", "width": 1}, {"from": "Effect of nonmetals (B, O, P, and S) doped with porous g-C3N4 for improved electron transfer towards photocatalytic CO2 reduction with water into CH4", "to": "Carbon dioxide", "width": 1}, {"from": "Effect of nonmetals (B, O, P, and S) doped with porous g-C3N4 for improved electron transfer towards photocatalytic CO2 reduction with water into CH4", "to": "CO2 photoreduction", "width": 1}, {"from": "Effect of nonmetals (B, O, P, and S) doped with porous g-C3N4 for improved electron transfer towards photocatalytic CO2 reduction with water into CH4", "to": "Methane production", "width": 1}, {"from": "Effect of nonmetals (B, O, P, and S) doped with porous g-C3N4 for improved electron transfer towards photocatalytic CO2 reduction with water into CH4", "to": "Nonmetals doped", "width": 1}, {"from": "Effect of nonmetals (B, O, P, and S) doped with porous g-C3N4 for improved electron transfer towards photocatalytic CO2 reduction with water into CH4", "to": "Porous g-C3N4", "width": 1}, {"from": "Incidence and Clearance of Anal Human Papillomavirus Infection in 16 164 Individuals, According to Human Immunodeficiency Virus Status, Sex, and Male Sexuality: An International Pooled Analysis of 34 Longitudinal Studies", "to": "anus", "width": 1}, {"from": "Incidence and Clearance of Anal Human Papillomavirus Infection in 16 164 Individuals, According to Human Immunodeficiency Virus Status, Sex, and Male Sexuality: An International Pooled Analysis of 34 Longitudinal Studies", "to": "clearance", "width": 1}, {"from": "Incidence and Clearance of Anal Human Papillomavirus Infection in 16 164 Individuals, According to Human Immunodeficiency Virus Status, Sex, and Male Sexuality: An International Pooled Analysis of 34 Longitudinal Studies", "to": "HIV", "width": 1}, {"from": "Incidence and Clearance of Anal Human Papillomavirus Infection in 16 164 Individuals, According to Human Immunodeficiency Virus Status, Sex, and Male Sexuality: An International Pooled Analysis of 34 Longitudinal Studies", "to": "HPV", "width": 1}, {"from": "Incidence and Clearance of Anal Human Papillomavirus Infection in 16 164 Individuals, According to Human Immunodeficiency Virus Status, Sex, and Male Sexuality: An International Pooled Analysis of 34 Longitudinal Studies", "to": "incidence", "width": 1}, {"from": "Extending Theory of Planned Behavior to Understand Service-Oriented Organizational Citizen Behavior", "to": "job attitude", "width": 1}, {"from": "Extending Theory of Planned Behavior to Understand Service-Oriented Organizational Citizen Behavior", "to": "organizational justice", "width": 1}, {"from": "Extending Theory of Planned Behavior to Understand Service-Oriented Organizational Citizen Behavior", "to": "service-oriented organizational citizenship behavior", "width": 1}, {"from": "Extending Theory of Planned Behavior to Understand Service-Oriented Organizational Citizen Behavior", "to": "structural equation modeling", "width": 1}, {"from": "Extending Theory of Planned Behavior to Understand Service-Oriented Organizational Citizen Behavior", "to": "theory of planned behavior", "width": 1}, {"from": "Capability of single and double elements doped perovskite oxide catalysts in 5-hydroxymethyl furfural oxidation", "to": "5-Hydroxymethylfurfural", "width": 1}, {"from": "Capability of single and double elements doped perovskite oxide catalysts in 5-hydroxymethyl furfural oxidation", "to": "LaMnxNi1-xO3-\u03b4", "width": 1}, {"from": "Capability of single and double elements doped perovskite oxide catalysts in 5-hydroxymethyl furfural oxidation", "to": "Oxidation", "width": 1}, {"from": "Capability of single and double elements doped perovskite oxide catalysts in 5-hydroxymethyl furfural oxidation", "to": "Selectivity", "width": 1}, {"from": "Capability of single and double elements doped perovskite oxide catalysts in 5-hydroxymethyl furfural oxidation", "to": "Surface oxygen", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+                      network.on("stabilizationProgress", function(params) {
+                          document.getElementById('loadingBar').removeAttribute("style");
+                          var maxWidth = 496;
+                          var minWidth = 20;
+                          var widthFactor = params.iterations/params.total;
+                          var width = Math.max(minWidth,maxWidth * widthFactor);
+                          document.getElementById('bar').style.width = width + 'px';
+                          document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+                      });
+                      network.once("stabilizationIterationsDone", function() {
+                          document.getElementById('text').innerHTML = '100%';
+                          document.getElementById('bar').style.width = '496px';
+                          document.getElementById('loadingBar').style.opacity = 0;
+                          // really clean the dom element
+                          setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+                      });
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

@@ -11,6 +11,8 @@ import seaborn as sns
 import plotly.express as px
 from autogluon.tabular import TabularPredictor
 import os
+import networkx as nx
+from pyvis.network import Network
 
 # Load data
 data_path = '03_Data_Visualization/data_sample.csv'  # Replace with actual path in deployment
@@ -40,7 +42,7 @@ st.sidebar.markdown("""
 st.sidebar.markdown('<div class="sidebar-title">🔍 Navigation</div>', unsafe_allow_html=True)
 page = st.sidebar.selectbox(
     "Choose a page:",
-    ["Overview", "Relational Graphics", "Spatial Data Visualization", "Model Inference", "Model Comparison"],
+    ["Overview", "Relational Graphics", "Spatial Data Visualization","Network Visualization", "Model Inference", "Model Comparison"],
     format_func=lambda x: f"📄 {x}" if x == "Overview" else f"📊 {x}" if x == "Relational Graphics" else f"🌍 {x}" if x == "Spatial Data Visualization" else f"🤖 {x}" if x == "Model Inference" else f"⚖️ {x}"
 )
 
@@ -230,7 +232,7 @@ elif page == "Spatial Data Visualization":
     #     ).add_to(m)
 
     # โหลด GeoJSON สำหรับขอบเขตของแต่ละทวีป
-    geojson_path = 'continents.json'  # Replace with actual path to GeoJSON file
+    geojson_path = '03_Data_Visualization/continents.json'  # Replace with actual path to GeoJSON file
     with open(geojson_path) as f:
         geojson_data = json.load(f)
 
@@ -411,3 +413,73 @@ elif page == "Model Comparison":
         
         # Display dataframe
         st.dataframe(model_df)
+elif page == "Network Visualization":
+    # Sample the data to reduce size
+    sampled_data = data.sample(n=100, random_state=42)  # Adjust n to the desired sample size
+
+    # Prepare the network data
+    def create_network(data):
+        G = nx.Graph()
+        for idx, row in data.iterrows():
+            research_title = row['Title']
+            keywords = eval(row['keywords_list'])  # Convert string to list
+            G.add_node(research_title, size=row['CitedByCount'], group=row['cluster'])
+            for keyword in keywords:
+                G.add_node(keyword, group='keyword')
+                G.add_edge(research_title, keyword)
+        return G
+
+    # Visualize the network
+    def visualize_network(graph, physics):
+        net = Network(height="750px", width="100%", notebook=False)
+        net.from_nx(graph)
+        if not physics:
+            net.toggle_physics(False)
+        return net
+
+    # Streamlit app setup
+    def app():
+        # st.set_page_config(page_title="Research Network Visualization", layout="wide")
+        st.title("📚 Research Network Visualization")
+        st.markdown(
+            """
+            This application provides an **interactive network visualization** of research papers 
+            and their associated keywords. Use the sidebar to adjust the visualization settings.
+            You can drag and drop the nodes as you prefer.
+            """
+        )
+        
+        # Sidebar options
+        st.sidebar.title("🔧 Settings")
+        st.sidebar.markdown("Adjust the settings below to customize the visualization:")
+        n_samples = st.sidebar.slider("Number of Samples", min_value=10, max_value=50, value=20, step=5)
+        physics_enabled = st.sidebar.checkbox("Enable Physics Simulation", value=True)
+
+        # Sample the data
+        sampled_data = data.sample(n=n_samples, random_state=42)
+
+        # Show data insights
+        st.sidebar.markdown("### 📊 Data Insights")
+        # st.sidebar.write(f"**Total Papers:** {len(data)}")
+        st.sidebar.write(f"**Selected Papers:** {n_samples}")
+        st.sidebar.write(f"**Unique Keywords:** {len(set([kw for sublist in sampled_data['keywords_list'].apply(eval) for kw in sublist]))}")
+
+        # Create the network graph
+        graph = create_network(sampled_data)
+
+        # Visualize the network
+        net = visualize_network(graph, physics_enabled)
+        path = "research_network.html"
+        net.save_graph(path)
+        
+        # Display the graph in Streamlit
+        with open(path, 'r') as f:
+            html = f.read()
+        st.components.v1.html(html, height=800, width=800)
+
+        # Show data preview
+        with st.expander("🔍 Data Preview"):
+            st.write(sampled_data)
+
+    if __name__ == "__main__":
+        app()
