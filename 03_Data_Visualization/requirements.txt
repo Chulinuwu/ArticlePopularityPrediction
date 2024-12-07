@@ -6,3 +6,6 @@ autogluon.tabular
 setuptools
 catboost
 xgboost
+wordcloud
+folium
+streamlit-folium
