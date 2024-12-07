@@ -42,8 +42,8 @@ st.sidebar.markdown("""
 st.sidebar.markdown('<div class="sidebar-title">🔍 Navigation</div>', unsafe_allow_html=True)
 page = st.sidebar.selectbox(
     "Choose a page:",
-    ["Overview", "Relational Graphics", "Spatial Data Visualization","Network Visualization", "Model Inference", "Model Comparison"],
-    format_func=lambda x: f"📄 {x}" if x == "Overview" else f"📊 {x}" if x == "Relational Graphics" else f"🌍 {x}" if x == "Spatial Data Visualization" else f"🤖 {x}" if x == "Model Inference" else f"⚖️ {x}"
+    ["Overview", "Relational Graphics", "Spatial Data Visualization", "Network Visualization", "Model Inference", "Model Comparison"],
+    format_func=lambda x: f"📄 {x}" if x == "Overview" else f"📊 {x}" if x == "Relational Graphics" else f"🌍 {x}" if x == "Spatial Data Visualization" else f"🔗 {x}" if x == "Network Visualization" else f"🤖 {x}" if x == "Model Inference" else f"⚖️ {x}"
 )
 
 # Add some additional explanation or information
