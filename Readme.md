@@ -26,6 +26,16 @@ This section involves extracting data provided by the professor and combining it
 
 3. The combined data will be saved as `2_data_combined`.
 
+## 02_0_Data_Storage 💾
+This section covers how to store the combined dataset into a Cassandra database and interact with it using CQL (cassandra).
+
+### Steps:
+1. Install Cassandra locally or use a cloud-based instance
+   Start cassandra using `sudo service cassandra start`
+2. Set up the database by running `cqlsh -f 01.5_Data_Storage/structure.cql` 
+3. Write the data to Cassandra using PySpark `python -u 01.5_Data_Storage/spark_storage.py` 
+After completing these steps, you can query and use the stored data with PySpark.
+
 ## 02_Data_Science 🔬
 This section involves using the `2_data_combined` dataset to train a model to predict the cited by count of research papers.
 
