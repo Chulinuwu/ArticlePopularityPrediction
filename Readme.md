@@ -1,16 +1,46 @@
 # Article Popularity Prediction
 
 ## 00_Web_Scraping 🕸️
-```bash
-cd 00_Web_Scraping
-code .
-```
-Create a file named `data.py` with the following content:
+This section involves scraping data from the Scopus API. The provided credentials in `data.py` will be used to authenticate and retrieve data from Scopus.
 
-```py
-_id = "your email"
-_pass = "your pass"
-```
+### Steps:
+1. Navigate to the project directory:
+   ```bash
+   cd 00_Web_Scraping
+   code .
+   ```
+
+2. Create a file named `data.py` with the following content:
+   ```python
+   _id = "your email"
+   _pass = "your pass"
+   ```
+
+## 01_Data_Preparation 🧹
+This section involves extracting data provided by the professor and combining it with the data scraped from the web.
+
+### Steps:
+1. Run the `1_ingest_Ajarn.ipynb` file to extract data provided by the professor
+
+2. Run the `2_concat_data.ipynb` file to combine the data from the professor with the data scraped from the web.
+
+3. The combined data will be saved as `2_data_combined`.
+
+## 02_Data_Science 🔬
+This section involves using the `2_data_combined` dataset to train a model to predict the cited by count of research papers.
+
+### Steps:
+1. Run the `train_model.ipynb` file to train the model on the combined dataset and generate predictions for the cited by count of research papers.
+
+## 03_Data_Visualization 📊
+This section involves visualizing the data using Streamlit.
+
+### Steps:
+1. Navigate to the project directory and run the app:
+   ```bash
+   cd 03_Data_Visualization
+   streamlit run app.py
+   ```
 
 
 <!-- ## Instructions
