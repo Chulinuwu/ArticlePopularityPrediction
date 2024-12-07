@@ -387,7 +387,7 @@ elif page == "Model Comparison":
     st.title('Model Predictions Comparison')
     
     # Results folder path (modify as needed)
-    results_folder = '../result'
+    results_folder = 'result'
     
     # Load prediction files
     predictions = load_prediction_files(results_folder)
