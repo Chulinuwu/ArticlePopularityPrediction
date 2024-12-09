@@ -1,5 +1,11 @@
 # Article Popularity Prediction
 https://chulinuwu-articlepopularitypre-03-data-visualizationapp-ho1xxi.streamlit.app/
+
+## Install required Python modules
+   ```bash
+   pip install -r requirements.txt
+   ```
+
 ## 00_Web_Scraping 🕸️
 This section covers converting raw data files to JSON and scraping data from the Scopus website. Use the credentials provided in `secret.py` to log in to Scopus.
 

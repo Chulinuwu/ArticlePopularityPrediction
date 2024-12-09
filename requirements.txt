@@ -10,3 +10,9 @@ wordcloud
 folium
 streamlit-folium
 pyvis
+numpy
+plotly
+networkx
+requests
+beautifulsoup4
+scikit-learn
