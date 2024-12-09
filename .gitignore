@@ -19,6 +19,7 @@ Project/*
 
 # ID, PASS
 *data.py
+*secret.py
 
 AutogluonModels/*
 

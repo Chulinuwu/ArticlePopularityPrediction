@@ -1,7 +1,7 @@
 # Article Popularity Prediction
 https://chulinuwu-articlepopularitypre-03-data-visualizationapp-ho1xxi.streamlit.app/
 ## 00_Web_Scraping 🕸️
-This section involves scraping data from the Scopus API. The provided credentials in `data.py` will be used to authenticate and retrieve data from Scopus.
+This section covers converting raw data files to JSON and scraping data from the Scopus website. Use the credentials provided in `secret.py` to log in to Scopus.
 
 ### Steps:
 1. Navigate to the project directory:
@@ -10,10 +10,32 @@ This section involves scraping data from the Scopus API. The provided credential
    code .
    ```
 
-2. Create a file named `data.py` with the following content:
+2. Converting raw data files to JSON (update folder path in `convert_file_type.py`):
+   ```bash
+   python convert_file_type.py
+   ```
+
+3. Create a file named `secret.py` with the following content:
    ```python
    _id = "your email"
    _pass = "your pass"
+   ```
+
+4. Execute `scraping_script.py` to scrape data from Scopus website:
+   ```bash
+   cd scobus_scraping
+   python scraping_script.py
+   ```
+
+5. (Optional) Concatenate CSV files from scraping (update input file paths in `concat_csv.py`):
+   ```bash
+   python concat_csv.py
+   ```
+
+6. Clean the CSV file (update input file path in `clean_csv.py`):
+   ```bash
+   python clean_csv.py
+   cd ..
    ```
 
 ## 01_Data_Preparation 🧹
