@@ -76,8 +76,7 @@ This section involves visualizing the data using Streamlit.
 ### Steps:
 1. Navigate to the project directory and run the app:
    ```bash
-   cd 03_Data_Visualization
-   streamlit run app.py
+   streamlit run .\03_Data_Visualization\app.py
    ```
 
 

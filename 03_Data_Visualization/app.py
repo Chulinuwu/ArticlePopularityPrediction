@@ -13,6 +13,7 @@ from autogluon.tabular import TabularPredictor
 import os
 import networkx as nx
 from pyvis.network import Network
+from datetime import datetime
 
 # Load data
 data_path = '03_Data_Visualization/data_sample.csv'  # Replace with actual path in deployment
@@ -47,14 +48,33 @@ page = st.sidebar.selectbox(
 )
 
 # Add some additional explanation or information
-st.sidebar.markdown("""
----
-### About This App
-Use the navigation menu above to explore:
-- **Overview**: A summary of the dataset and key statistics.
-- **Relational Graphics**: Interactive visualizations of data relationships.
-- **Spatial Data Visualization**: Geographic analysis of data.
-""")
+st.sidebar.markdown("---")
+st.sidebar.markdown("### About This App")
+
+if page == "Overview":
+    st.sidebar.markdown("""
+    - **Overview**: A summary of the dataset and key statistics.
+    """)
+elif page == "Relational Graphics":
+    st.sidebar.markdown("""
+    - **Relational Graphics**: Interactive visualizations of data relationships.
+    """)
+elif page == "Spatial Data Visualization":
+    st.sidebar.markdown("""
+    - **Spatial Data Visualization**: Geographic analysis of data.
+    """)
+elif page == "Network Visualization":
+    st.sidebar.markdown("""
+    - **Network Visualization**: Visual representation of network data.
+    """)
+elif page == "Model Inference":
+    st.sidebar.markdown("""
+    - **Model Inference**: Using the trained model to make predictions.
+    """)
+elif page == "Model Comparison":
+    st.sidebar.markdown("""
+    - **Model Comparison**: Comparing the performance of different models.
+    """)
 
 
 if page == "Overview":
@@ -100,10 +120,13 @@ elif page == "Relational Graphics":
         ax.axis('off')
         st.pyplot(fig)
 
-        st.markdown("### Top 20 Keywords:")
-        top_words = word_counts.most_common(20)
-        for word, count in top_words:
-            st.markdown(f"- **{word}**: {count}")
+        st.markdown("### Top 3 Keywords:")
+        # top_words = word_counts.most_common(20)
+        # for word, count in top_words:
+        #     st.markdown(f"- **{word}**: {count}")
+        top_words = word_counts.most_common(3)
+        df_top_words = pd.DataFrame(top_words, columns=['Keyword', 'Count'])
+        st.table(df_top_words)
     else:
         st.error("The uploaded file does not contain a 'keywords_list' column.")
 
@@ -213,7 +236,7 @@ elif page == "Spatial Data Visualization":
     st.title("🗺️ Spatial Data Visualization")
     st.markdown("""
     ### Heatmap of citation by Continent
-    This visualization shows the distribution of articles across different continents. 
+    This visualization shows the distribution of articles across different continents.
     The intensity of the color represents the total number of citation.
     """)
 
@@ -281,21 +304,53 @@ elif page == "Model Inference":
     best_model_name = 'XGBoost'
 
     # Streamlit app
-    st.title('CitedByCount Prediction')
+    st.title('🤖 CitedByCount Prediction')
 
     # Input form
-    st.header('Input Data ( Model : Extreme Gradient Boosting)')
-    year = st.number_input('Year (ปีที่ตีพิมพ์)', min_value=1900, max_value=2100, step=1)
-    title = st.text_input('Title (หัวข้อบทความ)')
-    publication_name = st.text_input('Publication Name (ชื่อวารสาร)')
-    author_keywords = st.text_input('Author Keywords (คีย์เวิร์ดของผู้เขียน)')
-    authors_from_asia = st.number_input('authors_from_Asia (จำนวนผู้เขียนจากทวีป Asia)', min_value=0, max_value=10, step=1)
-    authors_from_oceania = st.number_input('authors_from_Oceania (จำนวนผู้เขียนจากทวีป Oceania)', min_value=0, max_value=10, step=1)
-    authors_from_europe = st.number_input('authors_from_Europe (จำนวนผู้เขียนจากทวีป Europe)', min_value=0, max_value=10, step=1)
-    authors_from_north_america = st.number_input('authors_from_North America (จำนวนผู้เขียนจากทวีป North America)', min_value=0, max_value=10, step=1)
-    authors_from_africa = st.number_input('authors_from_Africa (จำนวนผู้เขียนจากทวีป Africa)', min_value=0, max_value=10, step=1)
-    authors_from_south_america = st.number_input('authors_from_South America (จำนวนผู้เขียนจากทวีป America)', min_value=0, max_value=10, step=1)
-    authors_from_unknown = st.number_input('authors_from_Unknown (จำนวนผู้เขียนจากทวีปอะไรก็ไม่รู้)', min_value=0, max_value=10, step=1)
+    st.header('Model : Extreme Gradient Boosting')
+    
+    st.subheader('General Information')
+    col0, _, _ = st.columns(3)
+    with col0:
+        current_year = datetime.now().year
+        year = st.number_input('Year of Publication', min_value=1900, max_value=current_year, value=current_year, step=1, key='year')
+    title = st.text_input('Article Title', key='title')
+    publication_name = st.text_input('Journal Name', key='publication_name')
+    author_keywords = st.text_input('Author Keywords', key='author_keywords')
+    
+    if not year or not title or not publication_name or not author_keywords:
+        st.warning('Please fill out all fields.')
+    else:
+        pass
+    
+    
+    st.subheader('Number of Authors from Different Continents')
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        authors_from_asia = st.number_input('Authors from Asia', min_value=0, max_value=10, step=1)
+    with col2:
+        authors_from_oceania = st.number_input('Authors from Oceania', min_value=0, max_value=10, step=1)
+    with col3:
+        authors_from_europe = st.number_input('Authors from Europe', min_value=0, max_value=10, step=1)
+    
+    col4, col5, col6 = st.columns(3)
+    with col4:
+        authors_from_north_america = st.number_input('Authors from North America', min_value=0, max_value=10, step=1)
+    with col5:
+        authors_from_africa = st.number_input('Authors from Africa', min_value=0, max_value=10, step=1)
+    with col6:
+        authors_from_south_america = st.number_input('Authors from South America', min_value=0, max_value=10, step=1)
+        
+    col7, _, _ = st.columns(3)
+    with col7:
+        authors_from_unknown = st.number_input('Authors from Unknown Region', min_value=0, max_value=10, step=1)
+        
+    if (authors_from_asia == 0 and authors_from_oceania == 0 and authors_from_europe == 0 and
+        authors_from_north_america == 0 and authors_from_africa == 0 and authors_from_south_america == 0 and
+        authors_from_unknown == 0):
+        st.warning('Please fill out at least one field for the number of authors from different continents.')
+    else:
+        pass
 
     # Create a DataFrame from the input
     input_data = pd.DataFrame({
@@ -326,7 +381,6 @@ elif page == "Model Inference":
         st.write(prediction)
         
 elif page == "Model Comparison":
-    st.write("Model Comparison Page")
     def load_prediction_files(results_folder):
         """
         Load prediction CSV files from results folder
@@ -386,7 +440,11 @@ elif page == "Model Comparison":
         return plt
     
     # Title
-    st.title('Model Predictions Comparison')
+    st.title('⚖️ Model Predictions Comparison')
+    st.markdown("""
+    In this section, we compare the predictions made by different models. 
+    You can see how each model performs and analyze their prediction accuracy.
+    """)
     
     # Results folder path (modify as needed)
     results_folder = 'result'
@@ -411,8 +469,6 @@ elif page == "Model Comparison":
         # Display plot
         st.pyplot(fig)
         
-        # Display dataframe
-        st.dataframe(model_df)
 elif page == "Network Visualization":
     # Sample the data to reduce size
     sampled_data = data.sample(n=100, random_state=42)  # Adjust n to the desired sample size
