@@ -1,7 +1,7 @@
 # Article Popularity Prediction
 https://chulinuwu-articlepopularitypre-03-data-visualizationapp-ho1xxi.streamlit.app/
 
-## Install required Python modules
+## Install required Python modules 📥
    ```bash
    pip install -r requirements.txt
    ```
