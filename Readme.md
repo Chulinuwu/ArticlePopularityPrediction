@@ -38,7 +38,7 @@ This section covers converting raw data files to JSON and scraping data from the
    python concat_csv.py
    ```
 
-6. Clean the CSV file (update input file path in `clean_csv.py`):
+6. Clean the CSV file:
    ```bash
    python clean_csv.py
    cd ..

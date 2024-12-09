@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, StaleElementReferenceException
 import time
 import os
-from _secret import _id, _pass
+from secret import _id, _pass
 
 def scaping_script():
 
@@ -48,7 +48,7 @@ def scaping_script():
         search_box = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.CLASS_NAME, "styleguide-input-module___SqPU"))
         )
-        search_box.send_keys('o')
+        search_box.send_keys('input search') # Change input search
 
         search_button = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, "//button[@type='submit']"))
@@ -109,7 +109,7 @@ def scaping_script():
         input_from = driver.find_element(By.XPATH, "//input[@placeholder = 'From']")
         input_from.send_keys(1)
         input_to = driver.find_element(By.XPATH, "//input[@placeholder = 'To']")
-        input_to.send_keys(2500)
+        input_to.send_keys(1000) # Change number of research
         export_button2 = WebDriverWait(driver,10).until(
             EC.presence_of_element_located((By.XPATH, "//button[.//span[.//div[text()='Export']]]"))
         )
